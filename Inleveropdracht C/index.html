@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app='app3'>
+
+<head>
+  <meta charset="utf-8">
+  <title>Eindopdracht C</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+
+  <div ng-controller='sqlctrl'>
+
+    {{bedrijven}}
+
+  </div>
+
+  <script>
+    var app3 = angular.module('app3', []);
+
+
+    app3.controller('sqlctrl', function($scope, $http) {
+
+
+      $http.get("php/auto.php")
+        .then(function(response) {
+          $scope.bedrijven = response.data.records;
+        });
+
+    });
+
+    app3.config(['$qProvider', function($qProvider) {
+      $qProvider.errorOnUnhandledRejections(false);
+
+    }]);
+  </script>
+
+</body>
+
+</html>

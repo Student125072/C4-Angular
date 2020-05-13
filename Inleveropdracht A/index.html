@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app='app1'>
+
+<head>
+  <meta charset="utf-8">
+  <title>Eindopdracht A</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<style>
+  :invalid .email {
+    background-color: red;
+  }
+
+  input:focus {
+    border: 0.5px solid blue;
+  }
+
+  td{
+    border: 1px solid black;
+  }
+
+  th{
+    border: 1px solid black;
+    padding: 2px;
+  }
+
+  tr{
+    border: 1px solid black;
+  }
+</style>
+
+<body>
+  <div class="container">
+
+    <div ng-controller='controller1' class="text-center form-group">
+      <form name='form1' ng-submit="updateValues(form1)">
+        <label for='voornaam'>Voornaam</label><br><input type="text" name='voornaam' ng-model="voornaam" class="form-control-md"><br>
+        <label for="achternaam">Achternaam</label><br><input type="text" name='achternaam' ng-model="achternaam" class="form-control-md"><br>
+        <label for="adres">Adres</label><br><input type="text" ng-model="adres" name='adres' class="form-control-md"><br>
+        <label for="huisnummer">Huisnummer</label><br><input type="text" name='huisnummer' ng-model="huisnummer" class="form-control-md"><br>
+        <label for="postcode">Postcode</label><br><input type="text" ng-model="postcode" name='postcode' class="form-control-md"><br>
+        <label for="woonplaats">Woonplaats</label><br><input type="text" ng-model="woonplaats" name='woonplaats' class="form-control-md"><br>
+        <label for="emailadres">Emailadres</label><br><input type="email" ng-model="emailadres" class="email" name='emailadres' class="form-control-md"><br>
+        <br><input type="submit" class="btn btn-primary">
+      </form>
+      <br>
+      <br>
+      <table class="d-flex justify-content-center">
+        <tr>
+          <th>Voornaam</th>
+          <th>Achternaam</th>
+          <th>Adres</th>
+          <th>Huisnummer</th>
+          <th>Postcode</th>
+          <th>Woonplaats</th>
+          <th>Emailadres</th>
+        </tr>
+        <tr>
+          <td>{{personalinfo['voornaam']}}</td>
+          <td>{{personalinfo['achternaam']}}</td>
+          <td>{{personalinfo['adres']}}</td>
+          <td>{{personalinfo['huisnummer']}}</td>
+          <td>{{personalinfo['postcode']}}</td>
+          <td>{{personalinfo['woonplaats']}}</td>
+          <td>{{personalinfo['emailadres']}}</td>
+        </tr>
+      </table>
+
+      <br><br>
+      {{personalinfo}}
+
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.
+min.js"></script>
+  <script src="js/controller.js"></script>
+</body>
+
+</html>
