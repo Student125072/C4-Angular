@@ -1,0 +1,17 @@
+<h3>Add & Delete</h3> <br>
+
+<div ng-include="'views/index.htm'"></div> <br>
+
+  <form ng-submit="processForm()" style="width: 100%; display: block;">
+    ID: <input type="int" name="persoon_id" ng-model='formData.id'> <br>
+    Voornaam: <input type="text" name="voornaam" ng-model='formData.voornaam'> <br>
+    Achternaam: <input type="text" name="achternaam" ng-model='formData.achternaam'> <br>
+    Straat: <input type="text" name="straat" ng-model='formData.straat'> <br>
+    Huisnummer: <input type="text" name="huisnummer" ng-model='formData.huisnummer'> <br>
+    Postcode: <input type="text" name="postcode" ng-model='formData.postcode'> <br>
+    Woonplaats: <input type="text" name="woonplaats" ng-model='formData.woonplaats'> <br>
+    Telefoonnummer: <input type="text" name="telefoonnummer" ng-model='formData.telefoonnummer'> <br>
+    <input type="checkbox" name="verwijderen" ng-model='formData.verwijderen'> <label for="verwijderen">Verwijderen</label>
+    <input type="checkbox" name="toevoegen" ng-model='formData.toevoegen'> <label for="toevoegen">Toevoegen</label>
+    <input type="submit">
+  </form>

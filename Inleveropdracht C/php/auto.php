@@ -12,7 +12,7 @@ while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
     $outp .= '"woonplaats":' . "'" . $rs['woonplaats'] . "'" . ',' . '"telnr":' . "'" . $rs['telnr'] . "'" . '}';
 }
 header('Content-Type: application/json');
-$outp =json_encode(["records"=>$outp], JSON_UNESCAPED_UNICODE);
+$outp = '{"records":['.$outp.']}';
 $conn->close();
 echo($outp);
 ?>

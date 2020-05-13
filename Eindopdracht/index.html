@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+
+<head>
+  <meta charset="utf-8">
+  <title>Eindopracht</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body ng-controller='datactrl'>
+
+  <div ng-view></div>
+  <a href="#!add_del">Toevoegen en Verwijderen</a>
+  <a href="#!update">Update</a>
+  <a href="#!">Overzicht</a>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.7.9/angular-route.min.js"></script>
+  <script src="controllers/datacontroller.js"></script>
+</body>
+
+</html>

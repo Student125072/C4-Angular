@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Voornaam</th>
+    <th>Achternaam</th>
+    <th>Straat</th>
+    <th>Huisnummer</th>
+    <th>Postcode</th>
+    <th>Woonplaats</th>
+    <th>Telefoonnummer</th>
+    <th>Tijd toegevoegd</th>
+  </tr>
+  <tr ng-repeat='persoon in personen track by $index'>
+    <td>{{persoon.id}}</td>
+    <td>{{persoon.voornaam}}</td>
+    <td>{{persoon.achternaam}}</td>
+    <td>{{persoon.straat}}</td>
+    <td>{{persoon.huisnummer}}</td>
+    <td>{{persoon.postcode}}</td>
+    <td>{{persoon.woonplaats}}</td>
+    <td>{{persoon.telefoonnummer}}</td>
+    <td>{{persoon.tijdtoegevoegd}}</td>
+  </tr>
+</table>
